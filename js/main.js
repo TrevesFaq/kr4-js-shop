@@ -90,8 +90,8 @@ if (orderForm) {
 }
 
 console.log('Файл main.js подключён');
-console.log(product);
-console.table(product);
+console.log(products);
+console.table(products);
 
 function formatPrice(price) {
   return `${price} руб.`;
@@ -124,13 +124,140 @@ function createProductSummary(product) {
   return `${product.title}: ${formatPrice(finalPrice)}. Статус: ${status}.`;
 }
 
-const productSummary = createProductSummary(product);
+const productSummary = createProductSummary(products[0]);
 console.log(productSummary);
 
 const messageElement = document.querySelector('.js-message');
 const productOutputElement = document.querySelector('.product-output');
 
-if (messageElement && productOutputElement) {
-  messageElement.textContent = 'JavaScript подключён корректно.';
-  productOutputElement.textContent = productSummary;
+if (messageElement) {
+  messageElement.textContent =
+    'Массив товаров и функции обработки данных подключены.';
 }
+
+if (productOutputElement) {
+  productOutputElement.textContent = [
+    `Всего товаров: ${products.length}`,
+    `Товаров в наличии: ${countAvailableProducts(products)}`,
+    `Средняя цена: ${calculateAveragePrice(products)} руб.`,
+    `Результатов поиска "playstation": ${searchProducts(products, 'playstation').length}`
+  ].join('\n');
+}
+
+function getProductTitles(products) {
+  return products.map(function(product) {
+    return product.title;
+  });
+}
+
+function getAvailableProducts(products) {
+  return products.filter(function(product) {
+    return product.isAvailable === true;
+  });
+}
+
+console.log(getProductTitles(products));
+console.table(getAvailableProducts(products));
+
+function searchProducts(products, query) {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  if (normalizedQuery === '') {
+    return products;
+  }
+
+  return products.filter(function(product) {
+    return product.title.toLowerCase().includes(normalizedQuery);
+  });
+}
+
+const searchResult = searchProducts(products, 'playstation');
+console.table(searchResult);
+
+function filterProductsByCategory(products, category) {
+  if (category === 'all') {
+    return products;
+  }
+
+  return products.filter(function(product) {
+    return product.category === category;
+  });
+}
+
+const accessoryProducts = filterProductsByCategory(products, 'accessories');
+console.table(accessoryProducts);
+
+function sortProductsByPrice(products, direction = 'asc') {
+  const productsCopy = [...products];
+
+  if (direction === 'desc') {
+    return productsCopy.sort(function(a, b) {
+      return b.price - a.price;
+    });
+  }
+
+  return productsCopy.sort(function(a, b) {
+    return a.price - b.price;
+  });
+}
+
+const productsSortedByPrice = sortProductsByPrice(products, 'asc');
+console.table(productsSortedByPrice);
+
+function findProductById(products, id) {
+  return products.find(function(product) {
+    return product.id === id;
+  });
+}
+
+const selectedProduct = findProductById(products, 3);
+
+if (selectedProduct) {
+  console.log(`Найден товар: ${selectedProduct.title}`);
+} else {
+  console.log('Товар не найден');
+}
+
+function calculateTotalPrice(products) {
+  return products.reduce(function(sum, product) {
+    return sum + product.price;
+  }, 0);
+}
+
+function countAvailableProducts(products) {
+  return products.filter(function(product) {
+    return product.isAvailable === true;
+  }).length;
+}
+
+function calculateAveragePrice(products) {
+  if (products.length === 0) {
+    return 0;
+  }
+
+  const totalPrice = calculateTotalPrice(products);
+  return Math.round(totalPrice / products.length);
+}
+
+console.log('Общая стоимость:', calculateTotalPrice(products));
+console.log('Товаров в наличии:', countAvailableProducts(products));
+console.log('Средняя цена:', calculateAveragePrice(products));
+
+function getPreparedProducts(products, query, category, sortDirection) {
+  let result = [...products];
+
+  result = searchProducts(result, query);
+  result = filterProductsByCategory(result, category);
+  result = sortProductsByPrice(result, sortDirection);
+
+  return result;
+}
+
+const preparedProducts = getPreparedProducts(
+  products,
+  'playstation',
+  'consoles',
+  'asc'
+);
+
+console.table(preparedProducts);
