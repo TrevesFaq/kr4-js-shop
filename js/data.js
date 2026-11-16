@@ -6,7 +6,9 @@ const products = [
     price: 6500,
     discountPercent: 0,
     rating: 4.8,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/segamd2.jpeg',
+    description: '16-битная классика Sega: Sonic, Streets of Rage, Golden Axe.'
   },
   {
     id: 2,
@@ -15,7 +17,9 @@ const products = [
     price: 12900,
     discountPercent: 0,
     rating: 4.9,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/supernin.jpg',
+    description: 'Консоль 1990-х с Super Mario World и Zelda: A Link to the Past.'
   },
   {
     id: 3,
@@ -24,7 +28,9 @@ const products = [
     price: 5900,
     discountPercent: 0,
     rating: 4.6,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/ps1.jpeg',
+    description: 'Первая PlayStation: Crash Bandicoot, Resident Evil, Final Fantasy VII.'
   },
   {
     id: 4,
@@ -33,7 +39,9 @@ const products = [
     price: 7500,
     discountPercent: 0,
     rating: 4.8,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/ps2.jpg',
+    description: 'Одна из самых продаваемых консолей в истории: GTA, God of War, Metal Gear Solid.'
   },
   {
     id: 5,
@@ -42,7 +50,9 @@ const products = [
     price: 6900,
     discountPercent: 0,
     rating: 4.5,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/psp.jpeg',
+    description: 'Портативная консоль Sony с играми на UMD и большим экраном.'
   },
   {
     id: 6,
@@ -51,7 +61,9 @@ const products = [
     price: 11900,
     discountPercent: 0,
     rating: 4.6,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/psvita.jpeg',
+    description: 'Портативная консоль Sony с сенсорным экраном и двумя стиками.'
   },
   {
     id: 7,
@@ -60,7 +72,9 @@ const products = [
     price: 10500,
     discountPercent: 10,
     rating: 4.7,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/3ds.jpeg',
+    description: 'Портативная консоль Nintendo с двумя экранами и 3D-режимом.'
   },
   {
     id: 8,
@@ -69,7 +83,9 @@ const products = [
     price: 1800,
     discountPercent: 0,
     rating: 4.4,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/laser.jpeg',
+    description: 'Запасная лазерная головка для восстановления привода PlayStation.'
   },
   {
     id: 9,
@@ -78,7 +94,9 @@ const products = [
     price: 1200,
     discountPercent: 0,
     rating: 4.3,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/9v.jpeg',
+    description: 'Универсальный блок питания для 16-битных консолей.'
   },
   {
     id: 10,
@@ -87,7 +105,9 @@ const products = [
     price: 900,
     discountPercent: 0,
     rating: 4.5,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/storage.jpeg',
+    description: 'Карта памяти для сохранения прохождения на PlayStation 1.'
   },
   {
     id: 11,
@@ -96,6 +116,8 @@ const products = [
     price: 1500,
     discountPercent: 0,
     rating: 4.4,
-    isAvailable: true
+    isAvailable: true,
+    image: 'images/gamepad.jpeg',
+    description: 'Шестикнопочный контроллер для игр Sega Mega Drive.'
   }
 ];

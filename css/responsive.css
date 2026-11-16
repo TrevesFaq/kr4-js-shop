@@ -148,3 +148,23 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
+.order-form__group {
+  display: grid;
+  gap: 6px;
+}
+
+.form-error {
+  min-height: 1em;
+  margin: 0;
+  color: var(--red);
+  font-size: 14px;
+}
+
+.form-message {
+  margin: 0;
+}
+
+.order-form [aria-invalid="true"] {
+  border-color: var(--red);
+}
