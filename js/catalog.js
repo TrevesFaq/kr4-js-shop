@@ -76,6 +76,14 @@ function createProductCard(product) {
   const status = document.createElement('p');
   status.textContent = getProductStatus(product);
 
+  const actions = document.createElement('div');
+  actions.classList.add('product-card__actions');
+
+  const detailsLink = document.createElement('a');
+  detailsLink.classList.add('button', 'button--outline');
+  detailsLink.href = `product.html#${product.slug}`;
+  detailsLink.textContent = 'Подробнее';
+
   const button = document.createElement('button');
   button.classList.add('button');
   button.type = 'button';
@@ -88,7 +96,8 @@ function createProductCard(product) {
     button.textContent = 'Недоступно';
   }
 
-  body.append(category, title, description, price, status, button);
+  actions.append(detailsLink, button);
+  body.append(category, title, description, price, status, actions);
   card.append(image, body);
 
   return card;

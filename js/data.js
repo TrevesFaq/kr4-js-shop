@@ -1,6 +1,7 @@
 const products = [
   {
     id: 1,
+    slug: 'mega-drive-2',
     title: 'Sega Mega Drive 2',
     category: 'consoles',
     price: 6500,
@@ -12,6 +13,7 @@ const products = [
   },
   {
     id: 2,
+    slug: 'snes',
     title: 'Super Nintendo (SNES)',
     category: 'consoles',
     price: 12900,
@@ -23,6 +25,7 @@ const products = [
   },
   {
     id: 3,
+    slug: 'ps1',
     title: 'PlayStation 1',
     category: 'consoles',
     price: 5900,
@@ -34,6 +37,7 @@ const products = [
   },
   {
     id: 4,
+    slug: 'ps2',
     title: 'PlayStation 2',
     category: 'consoles',
     price: 7500,
@@ -45,6 +49,7 @@ const products = [
   },
   {
     id: 5,
+    slug: 'psp',
     title: 'PlayStation Portable (PSP)',
     category: 'consoles',
     price: 6900,
@@ -56,6 +61,7 @@ const products = [
   },
   {
     id: 6,
+    slug: 'ps-vita',
     title: 'PlayStation Vita',
     category: 'consoles',
     price: 11900,
@@ -67,6 +73,7 @@ const products = [
   },
   {
     id: 7,
+    slug: 'nintendo-3ds',
     title: 'Nintendo 3DS',
     category: 'consoles',
     price: 10500,
@@ -78,6 +85,7 @@ const products = [
   },
   {
     id: 8,
+    slug: 'ps1-laser',
     title: 'Лазерная головка для PS1',
     category: 'accessories',
     price: 1800,
@@ -89,6 +97,7 @@ const products = [
   },
   {
     id: 9,
+    slug: 'psu-9v',
     title: 'Блок питания 9V',
     category: 'accessories',
     price: 1200,
@@ -100,6 +109,7 @@ const products = [
   },
   {
     id: 10,
+    slug: 'ps1-memory-card',
     title: 'Карта памяти для PS1',
     category: 'accessories',
     price: 900,
@@ -111,6 +121,7 @@ const products = [
   },
   {
     id: 11,
+    slug: 'md-pad',
     title: 'Геймпад 6 кнопок для Mega Drive',
     category: 'accessories',
     price: 1500,
