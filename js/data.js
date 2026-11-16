@@ -1,9 +1,101 @@
-const product = {
-  id: 1,
-  title: 'Sega Mega Drive 2',
-  category: 'Консоли',
-  price: 6500,
-  discountPercent: 10,
-  rating: 4.7,
-  isAvailable: true
-};
+const products = [
+  {
+    id: 1,
+    title: 'Sega Mega Drive 2',
+    category: 'consoles',
+    price: 6500,
+    discountPercent: 0,
+    rating: 4.8,
+    isAvailable: true
+  },
+  {
+    id: 2,
+    title: 'Super Nintendo (SNES)',
+    category: 'consoles',
+    price: 12900,
+    discountPercent: 0,
+    rating: 4.9,
+    isAvailable: true
+  },
+  {
+    id: 3,
+    title: 'PlayStation 1',
+    category: 'consoles',
+    price: 5900,
+    discountPercent: 0,
+    rating: 4.6,
+    isAvailable: true
+  },
+  {
+    id: 4,
+    title: 'PlayStation 2',
+    category: 'consoles',
+    price: 7500,
+    discountPercent: 0,
+    rating: 4.8,
+    isAvailable: true
+  },
+  {
+    id: 5,
+    title: 'PlayStation Portable (PSP)',
+    category: 'consoles',
+    price: 6900,
+    discountPercent: 0,
+    rating: 4.5,
+    isAvailable: true
+  },
+  {
+    id: 6,
+    title: 'PlayStation Vita',
+    category: 'consoles',
+    price: 11900,
+    discountPercent: 0,
+    rating: 4.6,
+    isAvailable: true
+  },
+  {
+    id: 7,
+    title: 'Nintendo 3DS',
+    category: 'consoles',
+    price: 10500,
+    discountPercent: 10,
+    rating: 4.7,
+    isAvailable: true
+  },
+  {
+    id: 8,
+    title: 'Лазерная головка для PS1',
+    category: 'accessories',
+    price: 1800,
+    discountPercent: 0,
+    rating: 4.4,
+    isAvailable: true
+  },
+  {
+    id: 9,
+    title: 'Блок питания 9V',
+    category: 'accessories',
+    price: 1200,
+    discountPercent: 0,
+    rating: 4.3,
+    isAvailable: true
+  },
+  {
+    id: 10,
+    title: 'Карта памяти для PS1',
+    category: 'accessories',
+    price: 900,
+    discountPercent: 0,
+    rating: 4.5,
+    isAvailable: true
+  },
+  {
+    id: 11,
+    title: 'Геймпад 6 кнопок для Mega Drive',
+    category: 'accessories',
+    price: 1500,
+    discountPercent: 0,
+    rating: 4.4,
+    isAvailable: true
+  }
+];
