@@ -75,20 +75,6 @@ if (productSelect) {
   if (requestedProduct) productSelect.value = requestedProduct;
 }
 
-// Демонстрационная отправка формы без сервера.
-const orderForm = document.getElementById('page-order-form');
-
-if (orderForm) {
-  orderForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    if (!orderForm.reportValidity()) return;
-
-    document.getElementById('form-success').hidden = false;
-    orderForm.reset();
-  });
-}
-
 console.log('Файл main.js подключён');
 console.log(products);
 console.table(products);

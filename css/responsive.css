@@ -1,3 +1,10 @@
+/*
+Адаптивные стили для контрольной работы №3.
+Подход: Mobile First.
+Базовые стили рассчитаны на мобильный экран.
+Расширения добавляются через min-width медиазапросы.
+*/
+
 *,
 *::before,
 *::after {
@@ -147,4 +154,105 @@ body {
   .product-grid--catalog {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+/* Каталог КР №4 */
+.catalog-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.catalog-controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(37, 32, 58, 0.08);
+}
+
+.catalog-controls__group {
+  display: grid;
+  gap: 6px;
+}
+
+.catalog-controls__group label {
+  font-weight: 700;
+}
+
+.catalog-controls__input,
+.catalog-controls__select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  color: #25203a;
+  background: var(--white);
+  border: 1px solid #aaa497;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.catalog-controls__input:focus,
+.catalog-controls__select:focus {
+  border-color: var(--red);
+  outline: 2px solid rgba(201, 54, 43, 0.2);
+}
+
+.catalog-count {
+  margin: 12px 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.catalog-empty {
+  padding: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.catalog-empty[hidden] {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .catalog-controls {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid--catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .product-grid--catalog {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Валидация формы КР №4 */
+.order-form__group {
+  display: grid;
+  gap: 6px;
+}
+
+.form-error {
+  min-height: 1em;
+  margin: 0;
+  color: var(--red);
+  font-size: 14px;
+}
+
+.form-message {
+  margin: 0;
+}
+
+.order-form [aria-invalid="true"] {
+  border-color: var(--red);
 }
